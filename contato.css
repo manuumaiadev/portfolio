@@ -1,0 +1,98 @@
+/*CONTATO*/
+.contact-section {
+  padding: 60px 20px;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.contact-heading {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.contact-heading .icon {
+  font-size: 40px;
+  color: #a855f7;
+  background: linear-gradient(45deg, #6366f1, #ec4899);
+  -webkit-text-fill-color: transparent;
+}
+
+.contact-heading h1 {
+  margin: 10px 0;
+  font-size: 32px;
+  color: #111827;
+}
+
+.contact-heading p {
+  color: #6b7280;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 14px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  font-size: 16px;
+  background-color: #fff;
+  outline: none;
+  transition: border 0.3s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #6366f1;
+}
+
+.contact-form button {
+  padding: 14px;
+  background: #6366f1;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.contact-form button:hover {
+  background: #4f46e5;
+}
+
+.social-section {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.social-section p {
+  margin-bottom: 12px;
+  color: #4b5563;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.social-links a {
+  text-decoration: none;
+  color: #4b5563;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.social-links a i {
+  margin-right: 8px;
+  font-size: 18px;
+}
+
+.social-links a:hover {
+  color: #6366f1;
+}

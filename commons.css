@@ -1,0 +1,340 @@
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    color: #ffffff;
+    scroll-behavior: smooth;
+    background: #3b027c;
+    background-image: url("imagens/fundolimpo.png");
+    background-size: cover;
+    background-position: center;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: -1;
+
+    background:
+        radial-gradient(800px at 20% 15%, rgba(190, 27, 215, .18), transparent 60%),
+        radial-gradient(900px at 80% 60%, rgba(63, 3, 228, 0.12), transparent 60%);
+}
+
+html,
+body {
+    overflow-x: hidden;
+}
+
+
+/* ================= NAVBAR ================= */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 8%;
+    font-weight: 700;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 1000;
+    background: transparent;
+    transition: background 0.4s ease, backdrop-filter 0.4s ease, box-shadow 0.4s ease;
+}
+
+.navbar.scrolled {
+    background: rgba(20, 5, 40, 0.75);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.35);
+}
+
+.logo img {
+    max-width: 60px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 22px;
+    font-size: 18px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #fff;
+    position: relative;
+    font-weight: 500;
+}
+
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0%;
+    height: 2px;
+    background: #24e9a1c6;
+    transition: .3s;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+
+/* EXPERIENCIAS*/
+.experience-section {
+    padding: 60px 20px;
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.container-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.experience-title {
+    font-size: 28px;
+    color: #000000;
+}
+
+.btn-download {
+    background-color: #3b98bc;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.section-heading {
+    margin-top: 40px;
+    font-size: 22px;
+}
+
+.section-heading.blue {
+    color: #1ba37f;
+}
+
+.section-heading.pink {
+    color: #8b149d;
+}
+
+.section-heading.purple {
+    color: #7c3aed;
+}
+
+.card {
+    background-color: rgb(225, 225, 225);
+    border-radius: 12px;
+    padding: 20px;
+    display: flex;
+    margin: 20px 0;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
+}
+
+.card-left {
+    width: 50%;
+    font-size: 15px;
+    color: #000000;
+    padding-right: 100px;
+}
+
+.card-date {
+    font-weight: bold;
+    color: #3b98bc;
+}
+
+.card-role {
+    margin-top: 8px;
+}
+
+.card-right {
+    width: 65%;
+    font-size: 15px;
+    color: #000000;
+}
+
+.skills-box {
+    background-color: rgb(225, 225, 225);
+    border-radius: 12px;
+    padding: 30px;
+    margin-top: 50px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
+}
+
+.skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.skill {
+    background-color: #ffffff;
+    padding: 10px 16px;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.skill:hover {
+    background-color: #ed7affb5;
+    transform: translateY(-4px);
+}
+
+.skills-section {
+    margin-top: 30px;
+}
+
+.skills-subtitle {
+    font-size: 16px;
+    font-weight: 700;
+    color: #be1bd7;
+    margin-bottom: 10px;
+}
+
+/* ================= FOOTER ================= */
+.footer {
+    color: #fff;
+    /* transição suave com a seção acima */
+    background: linear-gradient(to top,
+            #050507 0%,
+            #0a0a11 45%,
+            rgba(10, 10, 17, 0.3) 75%,
+            transparent 100%);
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 12px;
+}
+
+.footer-logo img {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+}
+
+.footer-container {
+    width: min(1100px, 90%);
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 60px;
+}
+
+/* marca */
+.footer-brand h2 {
+    font-size: 28px;
+    margin-bottom: 12px;
+    background: linear-gradient(90deg, #be1bd7, #24e9a1);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.footer-brand p {
+    opacity: .7;
+    max-width: 380px;
+    line-height: 1.6;
+}
+
+/* contatos */
+.footer-contact {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    color: #dcdcec;
+    padding: 10px 14px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(8px);
+    transition: .25s;
+}
+
+.contact-item i {
+    font-size: 20px;
+    color: #24e9a1;
+}
+
+.contact-item:hover {
+    transform: translateY(-3px);
+    background: rgba(36, 233, 161, 0.12);
+    box-shadow: 0 10px 25px rgba(36, 233, 161, .18);
+}
+
+/* linha final */
+.footer-bottom {
+    margin-top: 70px;
+    padding: 20px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    text-align: center;
+    font-size: 14px;
+    opacity: .6;
+}
+
+@media(max-width:850px) {
+
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-brand p {
+        max-width: 100%;
+    }
+
+    .contact-item {
+        justify-content: center;
+    }
+}
+
+.whatsapp-float {
+    position: fixed;
+    right: 26px;
+    bottom: 26px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, .35);
+    transition: .25s;
+}
+
+.whatsapp-float img {
+    width: 65px;
+    height: 65px;
+}
+
+/* hover */
+.whatsapp-float:hover {
+    transform: scale(1.12);
+    box-shadow: 0 12px 35px rgba(37, 211, 102, .6);
+}
+
+@media(max-width:768px) {
+    .whatsapp-float {
+        right: 18px;
+        bottom: 18px;
+        width: 58px;
+        height: 58px;
+    }
+}
