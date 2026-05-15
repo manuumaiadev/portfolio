@@ -105,16 +105,19 @@ export default function Experience() {
           </a>
         </div>
 
-        {/* BLOCO 2 — Timeline Horizontal */}
-        <div className="exp-htimeline-wrap" data-reveal="up">
-          <div className="exp-htimeline">
-            {experiences.map(e => (
-              <div className="exp-htimeline-item" key={e.title}>
-                <div className="exp-htimeline-dot" />
-                <div className="exp-htimeline-card">
-                  <span className="exp-htimeline-period">{e.period}</span>
-                  <h3 className="exp-htimeline-title">{e.title}</h3>
-                  <p className="exp-htimeline-desc">{e.desc}</p>
+        {/* BLOCO 2 — Timeline Vertical Neon */}
+        <div className="vtl-wrap" data-reveal="up">
+          <div className="vtl-container">
+            {experiences.map((e, i) => (
+              <div className="vtl-item" key={e.title}>
+                <div className="vtl-dot-col">
+                  <div className="vtl-dot" />
+                  {i < experiences.length - 1 && <div className="vtl-line" />}
+                </div>
+                <div className="vtl-card">
+                  <span className="vtl-period">{e.period}</span>
+                  <h3 className="vtl-title">{e.title}</h3>
+                  <p className="vtl-desc">{e.desc}</p>
                 </div>
               </div>
             ))}

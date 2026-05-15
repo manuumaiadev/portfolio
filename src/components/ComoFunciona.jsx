@@ -51,15 +51,16 @@ export default function ComoFunciona() {
         <p>Processo simples e previsível — você sabe exatamente o que vai acontecer e em quanto tempo.</p>
       </div>
 
-      <div className="cf-vtl" data-reveal="up">
+      <div className="stepper" data-reveal="up">
         {steps.map((s, i) => (
-          <div className="cf-vtl-card" key={s.title}>
-            <div className="cf-vtl-num">0{i + 1}</div>
-            <div className="cf-vtl-icon">{s.icon}</div>
-            <div className="cf-vtl-body">
-              <h3 className="cf-vtl-title">{s.title}</h3>
-              <p className="cf-vtl-desc">{s.desc}</p>
+          <div className="stepper-item" key={s.title}>
+            <div className="stepper-icon-wrap">
+              <div className="stepper-icon">{s.icon}</div>
+              {i < steps.length - 1 && <div className="stepper-connector" />}
             </div>
+            <span className="stepper-num">0{i + 1}</span>
+            <h3 className="stepper-title">{s.title}</h3>
+            <p className="stepper-desc">{s.desc}</p>
           </div>
         ))}
       </div>

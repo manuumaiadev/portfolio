@@ -40,6 +40,16 @@ export default function App() {
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
 
+  // Cursor spotlight
+  useEffect(() => {
+    const onMove = (e) => {
+      document.documentElement.style.setProperty('--cx', e.clientX + 'px')
+      document.documentElement.style.setProperty('--cy', e.clientY + 'px')
+    }
+    window.addEventListener('mousemove', onMove)
+    return () => window.removeEventListener('mousemove', onMove)
+  }, [])
+
   return (
     <>
       <div className="reading-progress" />
